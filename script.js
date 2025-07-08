@@ -20,8 +20,24 @@ const spinBtn = document.getElementById('spin-btn');
 const resetBtn = document.getElementById('reset-btn');
 
 // ----- Event Listeners -----
-spinBtn.addEventListener('click', handleSpin);
+// spinBtn.addEventListener('click', handleSpin);
 resetBtn.addEventListener('click', init);
 
 // ----- Functions -----
+function init() {
+  credits = 100;
+  reels = ['', '', ''];
+  message = "Press Spin to play!";
+  isGameOver = false;
+//   render();
+}
 
+//  // Randomly assign symbols to each reel
+//  reels = reels.map(() => {
+//    const randIndex = Math.floor(Math.random() * symbols.length);
+//    return symbols[randIndex];
+//  });
+console.log(reels);
+
+// ----- Start Game -----
+init();
