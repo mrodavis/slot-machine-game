@@ -66,15 +66,44 @@ h1 {
   z-index: 2;
 }
 
-.reel {
+ .reel {
   background: white;
   width: 98px;         /* was 80px */
-  height: 100px;       /* was 120px */
+  height: 100px;        /* was 120px */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   text-align: center;
   line-height: 110px;
   font-size: 3rem;
+  overflow: hidden; 
+  position: relative;
+} 
+/* .reel {
+  width: 80px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: white;
+  border: 2px solid #ccc;
+  position: relative;
+} */
+
+.reel-strip {
+  height: 100px;
+  display: flex;
+  flex-direction: column;       /* Ensures stacking vertically */
+  font-size: 3rem;
+  line-height: 120px;
+  text-align: center;
+  transition: transform 1s ease-out;
+  transform: translateY(0);     /* Default position */
+}
+
+.reel-strip div {
+  height: 100px;             /* Match the height of .reel */
+  line-height: 100px;        /* Center the emoji vertically */
+  font-size: 3rem;
+  text-align: center;
 }
 
 #message {
@@ -133,10 +162,14 @@ label[for="bet-select"] {
   margin: 15px auto;
 }
 
+@keyframes pulse-glow {
+  0%   { box-shadow: 0 0 8px 2px gold; }
+  50%  { box-shadow: 0 0 16px 8px gold; }
+  100% { box-shadow: 0 0 8px 2px gold; }
+}
+
 .reel.win {
-  border-color: gold;
-  background-color: #2e8b57;
-  transition: 0.3s ease-in-out;
+  animation: pulse-glow 1s infinite;
 }
 
 /* @keyframes spin {
@@ -148,7 +181,6 @@ label[for="bet-select"] {
     filter: blur(2px);
   opacity: 0.8;
 }
-
 
 /* @media (max-width: 500px) {
   .slot-container {

@@ -6,19 +6,29 @@
   <title>Slot Machine Game</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <main>
     <h1>🎰 Slot Machine</h1>
-
+<br>
     <div id="credits">Credits: $<span id="credit-amount">100</span></div>
+    
     <div class="slot-container">
   <img src="img_assets/slot machine.png" alt="slot frame" class="slot-frame" />
     <div class="reels">
-      <div class="reel" id="reel-1">❓</div>
+      <!-- <div class="reel" id="reel-1">❓</div>
       <div class="reel" id="reel-2">❓</div>
-      <div class="reel" id="reel-3">❓</div>
-    </div>
+      <div class="reel" id="reel-3">❓</div> -->
+      <div class="reel">
+    <div class="reel-strip" id="strip-1">❓</div>
+  </div>
+  <div class="reel">
+    <div class="reel-strip" id="strip-2">❓</div>
+  </div>
+  <div class="reel">
+    <div class="reel-strip" id="strip-3">❓</div>
+  </div>
 </div>
     </main>
 
@@ -39,9 +49,9 @@
     <div class="buttons">
       <button id="spin-btn">🎲 Spin</button>
       <button id="reset-btn">🔄 Reset</button>
+      <button id="test-btn">🧪 Test</button>
     </div>
   </main>
-
-  
+<audio id="win-sound" src="sound/you-win.mp3" preload="auto"></audio>
 </body>
 </html>
