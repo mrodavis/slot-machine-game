@@ -68,9 +68,9 @@ h1 {
 
 .reel {
   background: white;
-  width: 95px;         /* was 80px */
+  width: 98px;         /* was 80px */
   height: 100px;       /* was 120px */
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   text-align: center;
   line-height: 110px;
