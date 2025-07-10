@@ -12,14 +12,29 @@
     <h1>🎰 Slot Machine</h1>
 
     <div id="credits">Credits: $<span id="credit-amount">100</span></div>
-
+    <div class="slot-container">
+  <img src="img_assets/slot machine.png" alt="slot frame" class="slot-frame" />
     <div class="reels">
       <div class="reel" id="reel-1">❓</div>
       <div class="reel" id="reel-2">❓</div>
       <div class="reel" id="reel-3">❓</div>
     </div>
+</div>
+    </main>
 
-    <div id="message">Press Spin to play!</div>
+<div class="bet-control">
+<label for="bet-select">Bet Amount:</label>
+<select id="bet-select">
+  <option value="10">$10</option>
+  <option value="20">$20</option>
+  <option value="50">$50</option>
+</select>
+</div>
+
+    <div id="message">
+  <span id="message-text">Press Spin to play!</span>
+  <span id="message-amount" class="animate"></span>
+</div>
 
     <div class="buttons">
       <button id="spin-btn">🎲 Spin</button>
