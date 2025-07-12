@@ -1,3 +1,5 @@
+/* All code was collaboratively created by human, chatGPT, Coursera & stackOverflow */
+
 // ----- Constants -----
 const symbols = ['🍒', '💎', '🍋', '🔔', '🍇', '7️⃣'];
 // const betAmount = 10;
@@ -15,22 +17,16 @@ const reelEls = Array.from(document.querySelectorAll('.reel'));
 const betSelect = document.getElementById('bet-select'); //Bet Dropdown
 const spinBtn = document.getElementById('spin-btn');
 const resetBtn = document.getElementById('reset-btn');
-const testBtn = document.getElementById('test-btn')
+
 
 // ----- Event Listeners -----
 spinBtn.addEventListener('click', handleSpin);
 resetBtn.addEventListener('click', init);
-testBtn.addEventListener('click', test);
+
 
 // ----- Functions -----
 
-/*function init() {
-  credits = 100;
-  reels = ['', '', ''];
-  updateMessage("Press Spin to play!", "");
-  isGameOver = false;
-  render();
-}; */
+
 function init() {
   credits = 100;
   reels = ['', '', ''];
@@ -49,59 +45,6 @@ function init() {
   render();
 }
 
-// function handleSpin() {
-//  if (isGameOver || credits < betAmount) return;
-
-
-//  credits -= betAmount;
-//  message = "Spinning...";
-
-//    // Trigger animation on each reel
-//   reelEls.forEach(reel => reel.classList.add('spinning'));
-
-//   // After 600ms, show results
-//   setTimeout(() => {
- 
-//  // Randomly assign symbols to each reel
-//  reels = reels.map(() => {
-//    const randIndex = Math.floor(Math.random() * symbols.length);
-//    return symbols[randIndex];
-//  });
-/* function handleSpin() {
-  const bet = parseInt(betSelect.value);
-  if (isGameOver || credits < bet) return;
-     // Reset all win classes
-  reelEls.forEach(reel => reel.classList.remove('win'));
-
-  credits -= bet;
-  updateMessage("Spinning...", "");
-
-  const spinIntervals = [];
-  const spinDuration = [700, 2000, 3300]; // each reel stops after a different delay
-
-  // Start each reel cycling
-  reelEls.forEach((el, idx) => {
-    spinIntervals[idx] = setInterval(() => {
-      const randSymbol = symbols[Math.floor(Math.random() * symbols.length)];
-      el.textContent = randSymbol;
-    }, 75); // fast cycling
-  });
-
-  // Stop each reel in sequence
-  reelEls.forEach((el, idx) => {
-    setTimeout(() => {
-      clearInterval(spinIntervals[idx]);
-      const resultSymbol = symbols[Math.floor(Math.random() * symbols.length)];
-      el.textContent = resultSymbol;
-      reels[idx] = resultSymbol;
-
-      // Once the last reel stops, evaluate result
-      if (idx === 2) {
-        evaluateSpin(bet);
-      }
-    }, spinDuration[idx]);
-  });
-} */
 function handleSpin() {
   const bet = parseInt(betSelect.value);
   if (isGameOver || credits < bet) return;
@@ -129,39 +72,7 @@ function handleSpin() {
 }
 
 
-// // Check matches
-// const [r1, r2, r3] = reels;
-//  if (r1 === r2 && r2 === r3) {
-//    credits += bet * 5;
-//    message = `🎉 JACKPOT! +$${bet * 5}`;
-//  } else if (r1 === r2 || r2 === r3 || r1 === r3) {
-//    credits += bet * 2;
-//    message = `✅ Nice Match! +$${bet * 2}`;
-//  } else {
-//    message = "❌ No match. Try again!";
-//  }
 
- /* // Check for game over
- if (credits <= 0) {
-   isGameOver = true;
-   message = "💀 Game Over! Out of credits.";
- }
-
-
- render(); */
-//      // Step 4: Remove animation class
-//     reelEls.forEach(reel => reel.classList.remove('spinning'));
-// }, 600);}
-// 🎆 Fireworks
-   function test(){ confetti({
-        particleCount: 150,
-        spread: 100,
-        origin: { y: 0.6 }
-    });
-        // Play sound
-  const jackpotSound = document.getElementById('win-sound');
-  if (jackpotSound) jackpotSound.play();
-}
 
 function render() {
  creditDisplay.textContent = credits;
@@ -189,26 +100,7 @@ function updateMessage(staticText, animatedAmount = "") {
   }
 }
 
-/* function evaluateSpin(bet) {
-  const [r1, r2, r3] = reels;
 
-  if (r1 === r2 && r2 === r3) {
-    credits += bet * 5;
-    message = `🎉 JACKPOT! +$${bet * 5}`;
-  } else if (r1 === r2 || r2 === r3 || r1 === r3) {
-    credits += bet * 2;
-    message = `✅ Nice Match! +$${bet * 2}`;
-  } else {
-    message = `❌ No match. -$${bet}`;
-  }
-
-  if (credits <= 0) {
-    isGameOver = true;
-    message = "💀 Game Over! You're out of credits.";
-  }
-
-  render();
-} */
 
 function evaluateSpin(bet) {
   const [r1, r2, r3] = reels;
@@ -237,7 +129,9 @@ function evaluateSpin(bet) {
     const win = bet * 2;
     credits += win;
     updateMessage("✅ Nice Match!", `+$${win}`);
-
+    // Play sound
+  const secondWinSound = document.getElementById('2nd-win-sound');
+  if (secondWinSound) secondWinSound.play();
         // Add .win to matching reels only
     if (r1 === r2) {
       reelEls[0].classList.add('win');
@@ -252,11 +146,17 @@ function evaluateSpin(bet) {
 
   } else {
     updateMessage("❌ No match.", `-$${bet}`);
+        // Play sound
+  const loseSound = document.getElementById('lose-sound');
+  if (loseSound) loseSound.play();
   }
 
   if (credits <= 0) {
     isGameOver = true;
     updateMessage("💀 Game Over!", "");
+        // Play sound
+  const noCredSound = document.getElementById('no-credit-sound');
+  if (noCredSound) noCredSound.play();
   }
 
   render();
