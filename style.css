@@ -255,13 +255,13 @@ label[for="bet-select"] {
   height: 425px;  /* increased from 250px */
   padding-bottom: 150px;
   border-radius: 40px;
-  left: -12.5%;
+  left: -7.5%;
   z-index: -1;
   animation: blue-glow 5s infinite;
 }
 .slot-frame {
     width: 450px;
-    left: -22%;
+    left: -17%;
 }
 .slot-container {
   position: relative;
@@ -285,7 +285,7 @@ label[for="bet-select"] {
   font-size: 5rem;
   overflow: hidden; 
   position: absolute;
-  padding-right: 3%;
+  padding-left: 4%;
   margin: 0 6px;
   } */
 

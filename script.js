@@ -118,6 +118,7 @@ function evaluateSpin(bet) {
 
 // All match
     reelEls.forEach(reel => reel.classList.add('win'));
+    
 // 🎆 Fireworks
     confetti({
         particleCount: 150,
