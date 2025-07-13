@@ -285,9 +285,10 @@ label[for="bet-select"] {
   font-size: 5rem;
   overflow: hidden; 
   position: absolute;
-  padding-left: 4%;
+  padding-left: 5%;
   margin: 0 6px;
-  } */
+  gap: 5px;
+  } 
 
   .bet-control,
   #message,
