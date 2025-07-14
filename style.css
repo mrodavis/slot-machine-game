@@ -318,11 +318,11 @@ label[for="bet-select"] {
   margin-top: -95px;
   position: relative;
   z-index: 1;
-  left: 2%;
+  left: -3%;
 }
 
 .reels {
-top: 100px;
+top: 60px;
   width: 86%; /* tighter width */
   max-width: 255px;
   gap: 4px;
@@ -389,6 +389,7 @@ top: 100px;
   .slot-frame img {
   width: 100%;
   height: auto;
+  
 }
 .reel-strip div {
   height: 100px;
