@@ -322,7 +322,7 @@ label[for="bet-select"] {
 }
 
 .reels {
-top: 55px;
+top: 60px;
   width: 86%; /* tighter width */
   max-width: 255px;
   gap: 4px;
