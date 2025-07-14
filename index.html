@@ -5,66 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to e-Vegas</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" />
   <script defer src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <main>
-   <div class="header-wrap">
-    <h1>🎰 e-Vegas</h1>
-<br>
-    <div id="credits">Credits: $<span id="credit-amount">100</span></div>
-    </div><br>
-    <div class="slot-container">
-        <div id="support"></div>
-  <img src="img_assets/slot machine.png" alt="slot frame" class="slot-frame" />
-    <div class="reels">
-      <div class="reel">
-    <div class="reel-strip" id="strip-1">❓</div>
-  </div>
-  <div class="reel">
-    <div class="reel-strip" id="strip-2">❓</div>
-  </div>
-  <div class="reel">
-    <div class="reel-strip" id="strip-3">❓</div>
-  </div>
-</div>
-    </main>
 
-<div class="bet-control">
-<label for="bet-select">Bet Amount:</label>
-<select id="bet-select">
-  <option value="10">$10</option>
-  <option value="20">$20</option>
-  <option value="50">$50</option>
-</select>
-</div>
-<br>
-    <div id="message">
-  <span id="message-text">Press Spin to play!</span>
-  <span id="message-amount" class="animate"></span>
-</div>
-<br>
-    <div class="buttons">
-      <button id="spin-btn">🎲 Spin</button>
-      <button id="reset-btn">🔄 Reset</button>
-      
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="img_assets/fb_casino_tour.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header -->
+  <div class="header-wrap">
+    <h1>🎰 e-Vegas</h1>
+    <br />
+    <div id="credits">Credits: $<span id="credit-amount">100</span></div>
+  </div>
+
+  <!-- Game Layout -->
+  <div class="game-layout">
+    
+    <!-- Instructions on the Left -->
+    <div class="instructions">
+      <h2>🎰 How to Play</h2>
+      <ul>
+        <li>Select your bet amount</li>
+        <li>Press 🎲 <strong>Spin</strong></li>
+        <li>Match 2 or 3 symbols to win</li>
+        <li>If credits reach $0, game over</li>
+        <li>Press 🔄 <strong>Reset</strong> to restart</li>
+      </ul>
     </div>
-  </main>
-<audio id="win-sound" src="sound/you-win.mp3" preload="auto"></audio>
-<audio id="2nd-win-sound" src="sound/2nd-win.mp3" preload="auto"></audio>
-<audio id="lose-sound" src="sound/you-lose.mp3" preload="auto"></audio>
-<audio id="no-credit-sound" src="sound/out-of-credits.mp3" preload="auto"></audio>
-<video autoplay muted loop id="bg-video">
-  <source src="img_assets/fb_casino_tour.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const bgVideo = document.getElementById('bg-video');
-    bgVideo.playbackRate = 0.75; // 0.5 = half speed, 1 = normal, 2 = double
-  });
-</script>
+
+    <!-- Slot Machine on the Right -->
+    <div class="slot-machine-wrapper">
+      <div class="slot-container">
+        <div id="support">
+
+        <!-- Slot Frame and Reels -->
+        <img src="img_assets/slot machine.png" alt="slot frame" class="slot-frame" />
+        <div class="reels">
+          <div class="reel">
+            <div class="reel-strip" id="strip-1">❓</div>
+          </div>
+          <div class="reel">
+            <div class="reel-strip" id="strip-2">❓</div>
+          </div>
+          <div class="reel">
+            <div class="reel-strip" id="strip-3">❓</div>
+          </div>
+        </div>
+<br><br>
+        <!-- Bet Control -->
+        <div class="bet-control">
+          <label for="bet-select">Bet Amount:</label>
+          <select id="bet-select">
+            <option value="10">$10</option>
+            <option value="20">$20</option>
+            <option value="50">$50</option>
+          </select>
+        </div>
+
+        <!-- Game Message -->
+        <div id="message">
+          <span id="message-text">Press Spin to play!</span>
+          <span id="message-amount" class="animate"></span>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+          <button id="spin-btn">🎲 Spin</button>
+          <button id="reset-btn">🔄 Reset</button>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+  <!-- Sound Effects -->
+  <audio id="win-sound" src="sound/you-win.mp3" preload="auto"></audio>
+  <audio id="2nd-win-sound" src="sound/2nd-win.mp3" preload="auto"></audio>
+  <audio id="lose-sound" src="sound/you-lose.mp3" preload="auto"></audio>
+  <audio id="no-credit-sound" src="sound/out-of-credits.mp3" preload="auto"></audio>
+
+  <!-- Script for slowing video -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const bgVideo = document.getElementById('bg-video');
+      bgVideo.playbackRate = 0.75;
+    });
+  </script>
 </body>
 </html>

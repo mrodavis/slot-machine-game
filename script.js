@@ -1,4 +1,4 @@
-/* All code was collaboratively created by human, chatGPT, Coursera & stackOverflow */
+/* All code was collaboratively created by human, chatGPT, Coursera, MDN & stackOverflow */
 
 // ----- Constants -----
 const symbols = ['🍒', '💎', '🍋', '🔔', '🍇', '7️⃣'];
@@ -118,7 +118,7 @@ function evaluateSpin(bet) {
 
 // All match
     reelEls.forEach(reel => reel.classList.add('win'));
-    
+
 // 🎆 Fireworks
     confetti({
         particleCount: 150,
@@ -203,3 +203,98 @@ function spinReel(stripId, stopSymbol, duration = 1000) {
 
 // ----- Start Game -----
 init();
+
+// ===========================================
+// 💀 JS CODE GRAVEYARD
+// ===========================================
+
+// OLD spin handler without animation or delay
+/*
+function spin() {
+  const symbol1 = getRandomSymbol();
+  const symbol2 = getRandomSymbol();
+  const symbol3 = getRandomSymbol();
+
+  reel1.innerText = symbol1;
+  reel2.innerText = symbol2;
+  reel3.innerText = symbol3;
+
+  checkWin(symbol1, symbol2, symbol3);
+}
+*/
+
+// 🧪 Experimental delay-based spin (non-working)
+/*
+function spinWithDelay() {
+  setTimeout(() => {
+    const result = symbols[Math.floor(Math.random() * symbols.length)];
+    reel1.innerText = result;
+    reel2.innerText = result;
+    reel3.innerText = result;
+  }, 500);
+}
+*/
+
+// Previous checkWin logic (old reward system)
+/*
+function checkWin(r1, r2, r3) {
+  if (r1 === r2 && r2 === r3) {
+    credits += 100;
+    showMessage("Jackpot!", "+100");
+  } else if (r1 === r2 || r2 === r3 || r1 === r3) {
+    credits += 20;
+    showMessage("Close call!", "+20");
+  } else {
+    credits -= 10;
+    showMessage("No match.", "-10");
+  }
+}
+*/
+
+// Unused credit update function
+/*
+function addCredits(amount) {
+  currentCredits += amount;
+  updateCreditsDisplay();
+}
+*/
+
+// Legacy symbol randomizer
+/*
+function getRandomSymbol() {
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
+*/
+
+// 🧹 Legacy reset behavior (no confirmation)
+/*
+resetBtn.addEventListener("click", () => {
+  credits = 100;
+  updateCreditsDisplay();
+});
+*/
+
+// Emoji-only win test (no logic)
+/*
+function isEmojiWin(a, b, c) {
+  return a === b && b === c;
+}
+*/
+
+// Testing different symbol sets
+/*
+const testSymbols = ['🥥', '🍌', '🍎', '💰', '💣', '💀'];
+*/
+
+// 💥 Animated explosion (never integrated)
+/*
+function explodeWin() {
+  const explosion = document.createElement('div');
+  explosion.classList.add('explode');
+  document.body.appendChild(explosion);
+  setTimeout(() => explosion.remove(), 800);
+}
+*/
+
+// ===========================================
+
