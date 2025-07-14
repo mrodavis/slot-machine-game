@@ -322,12 +322,13 @@ label[for="bet-select"] {
 }
 
 .reels {
-top: 85px;
+top: 100px;
   width: 86%; /* tighter width */
   max-width: 255px;
   gap: 4px;
   margin-bottom: 60px;
   margin-right: -5px;
+  left: -1%;
 }
 
 .reel {
