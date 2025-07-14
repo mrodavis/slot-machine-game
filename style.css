@@ -275,3 +275,117 @@ label[for="bet-select"] {
     transform: translateY(0);
   }
 }
+
+/* Media Resize */
+@media screen and (max-width: 600px) {
+  .game-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .instructions {
+    width: 90%;
+    max-width: 350px;
+    padding: 15px;
+    font-size: 0.95rem;
+    z-index: 2;
+  }
+
+  #support {
+    width: 92%;
+    padding: 20px 10px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    padding-bottom: 40px;
+  }
+
+  .slot-container {
+    width: 120%;
+    max-width: 400px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+  }
+
+.slot-frame {
+  width: 120%;
+  height: 75%;
+  max-width: 360px;
+  margin: 0 auto;
+  margin-top: -95px;
+  position: relative;
+  z-index: 1;
+  left: -1.5%;
+}
+
+.reels {
+  top: 75px;
+  width: 70%;  /* allows a little more breathing room */
+  max-width: 265px;
+  gap: 5px;
+}
+
+.reel {
+  width: 80px;
+  height: 100px;
+  font-size: 2.2rem;
+}
+
+  .bet-control,
+  #message,
+  .buttons {
+    text-align: center;
+    margin: 15px auto;
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 90%;
+    max-width: 250px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  label[for="bet-select"] {
+    font-size: 1.2rem;
+  }
+
+  #bet-select {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    width: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 5px 20px;
+    margin: 10px auto;
+    width: auto;
+  }
+
+  #credits {
+    font-size: 1.3rem;
+    padding: 5px 20px;
+    margin: 5px auto 15px;
+    width: auto;
+  }
+
+  .header-wrap {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slot-frame img {
+  width: 100%;
+  height: auto;
+}
+.reel-strip div {
+  height: 100px;
+  line-height: 110px;
+  font-size: 3rem;
+  text-align: center;
+}
+}

@@ -1,6 +1,6 @@
 # slot-machine-game
 
-/* All code was collaboratively created by human, chatGPT, Coursera & stackOverflow */
+/* All code was collaboratively created by human, chatGPT, MDN, Coursera & stackOverflow */
 
 # 🎰 E-VEGAS: Slot Machine Game
 
