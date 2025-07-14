@@ -318,23 +318,26 @@ label[for="bet-select"] {
   margin-top: -95px;
   position: relative;
   z-index: 1;
-  left: -1.5%;
+  left: 2%;
 }
 
 .reels {
-  top: 75px;
-  width: 70%;  /* allows a little more breathing room */
-  max-width: 265px;
-  gap: 5px;
-    margin-bottom: 60px;
+top: 100px;
+  width: 86%; /* tighter width */
+  max-width: 255px;
+  gap: 3px;
+  margin-bottom: 60px;
 }
 
 .reel {
-  width: 80px;
-  height: 100px;
-  font-size: 2.2rem;
+  width: 75px;
+  height: 95px;
+  font-size: 2rem;
 }
-
+.bet-control {
+  margin-top: 60px;     /* for vertical space */
+  padding-top: 25px;    /* fine-tuning */
+}
   .bet-control,
   #message,
   .buttons {
