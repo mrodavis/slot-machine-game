@@ -148,7 +148,7 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   z-index: 2;
   margin-top: -92%;
@@ -156,7 +156,7 @@ h1 {
 
 .reel {
   background: beige;
-  width: 105px;
+  width: 110px;
   height: 140px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -322,17 +322,19 @@ label[for="bet-select"] {
 }
 
 .reels {
-top: 100px;
+top: 85px;
   width: 86%; /* tighter width */
   max-width: 255px;
-  gap: 3px;
+  gap: 4px;
   margin-bottom: 60px;
+  margin-right: -5px;
 }
 
 .reel {
-  width: 75px;
-  height: 95px;
+  width: 73px;
+  height: 105px;
   font-size: 2rem;
+  padding-top: 0px;
 }
 .bet-control {
   margin-top: 60px;     /* for vertical space */
