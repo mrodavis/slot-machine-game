@@ -326,6 +326,7 @@ label[for="bet-select"] {
   width: 70%;  /* allows a little more breathing room */
   max-width: 265px;
   gap: 5px;
+    margin-bottom: 60px;
 }
 
 .reel {
@@ -340,6 +341,7 @@ label[for="bet-select"] {
     text-align: center;
     margin: 15px auto;
     width: 100%;
+    margin-top: 30px;
   }
 
   .buttons button {
