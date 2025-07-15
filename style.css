@@ -101,6 +101,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   position: relative;
+  left: -5%
 }
 
 #support {
@@ -270,11 +271,10 @@ label[for="bet-select"] {
   color: #000;
   font-weight: bold;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   border: none;
   margin-bottom: 10px;
   font-size: 1.1rem;
-  
 }
 
 @keyframes pulse-glow {
@@ -435,15 +435,16 @@ top: 50px;
   }
   .how-to-play-toggle {
     width: 90%;
+    
   }
 }
 
 @media (min-width: 768px) {
   .how-to-play-toggle {
     position: relative;
-    left: 2%;
-    top: 10px;
-    z-index: 1000;
+    left: -1.4%;
+    top: 30px;
+    /* z-index: 1000; */
   }
 
   #toggle-instructions {
