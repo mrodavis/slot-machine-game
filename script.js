@@ -22,7 +22,10 @@ const resetBtn = document.getElementById('reset-btn');
 // ----- Event Listeners -----
 spinBtn.addEventListener('click', handleSpin);
 resetBtn.addEventListener('click', init);
-
+document.getElementById("toggle-instructions").addEventListener("click", function () {
+    const el = document.getElementById("instructions");
+    el.classList.toggle("collapse");
+  });
 
 // ----- Functions -----
 
