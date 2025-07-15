@@ -81,6 +81,9 @@ h1 {
 }
 
 .instructions ul {
+  text-align: left;
+  padding-left: 1.5rem; /* optional for better spacing */
+  margin: 0;             /* remove unwanted margin if any */
   list-style: none;
   padding: 0;
   font-size: 1rem;
@@ -88,8 +91,9 @@ h1 {
 }
 
 .instructions ul li::before {
-  content: "🎯 ";
+  content: "💫 ";
   margin-right: 5px;
+  
 }
 
 .slot-machine-wrapper {
@@ -431,5 +435,18 @@ top: 50px;
   }
   .how-to-play-toggle {
     width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .how-to-play-toggle {
+    position: relative;
+    left: 2%;
+    top: 10px;
+    z-index: 1000;
+  }
+
+  #toggle-instructions {
+    margin: 0;
   }
 }
