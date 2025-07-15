@@ -17,15 +17,18 @@ const reelEls = Array.from(document.querySelectorAll('.reel'));
 const betSelect = document.getElementById('bet-select'); //Bet Dropdown
 const spinBtn = document.getElementById('spin-btn');
 const resetBtn = document.getElementById('reset-btn');
+const slotSpin = document.getElementById('reel');
 
 
 // ----- Event Listeners -----
 spinBtn.addEventListener('click', handleSpin);
 resetBtn.addEventListener('click', init);
-document.getElementById("toggle-instructions").addEventListener("click", function () {
+document.getElementById("toggle-instructions").addEventListener('click', function () {
     const el = document.getElementById("instructions");
     el.classList.toggle("collapse");
   });
+// slotSpin.addEventListener('event', handleSpin);
+document.querySelector('.reels').addEventListener('click', handleSpin);
 
 // ----- Functions -----
 
