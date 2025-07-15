@@ -270,6 +270,7 @@ label[for="bet-select"] {
   border: none;
   margin-bottom: 10px;
   font-size: 1.1rem;
+  
 }
 
 @keyframes pulse-glow {
@@ -427,5 +428,8 @@ top: 50px;
     width: 90%;
     max-width: 300px;
     box-shadow: 0 0 10px cyan;
+  }
+  .how-to-play-toggle {
+    width: 90%;
   }
 }
